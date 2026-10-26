@@ -64,16 +64,17 @@ and then the bias factors and corrected numbers:
 
 ```
     channel            attributed   incremental   factor    age  confidence
-    brand_search            2,455           816    3.01x   400d         5%   STALE
-    generic_search          1,394         1,992    0.70x    12d        91%
-    display                 1,535           120   12.79x    95d        48%
+    brand_search            2,455           447    5.49x   400d         5%   STALE
+    generic_search          1,394         2,211    0.63x    12d        91%
+    display                 1,535           429    3.58x    95d        48%
 
     channel                   raw   corrected                               why
-    brand_search            2,455       2,379      shrunk: evidence is 400d old
-    generic_search          1,394       1,939                   full correction
+    brand_search            2,455       2,362      shrunk: evidence is 400d old
+    generic_search          1,394       2,139                   full correction
+    display                 1,535       1,003       shrunk: evidence is 95d old
 ```
 
-The journey simulation is seeded, but the holdout experiments derive their seed from Python's per-process string hash, so the experiment-based numbers (bias factors and below) vary slightly from run to run.
+The whole demo is seeded, including the holdout experiments, so repeated runs print identical output.
 
 ## How it works
 

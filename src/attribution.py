@@ -135,8 +135,8 @@ def markov_removal_effect(journeys: list[Journey]) -> dict[str, float]:
 
     A genuine improvement on last-click: it accounts for position and for
     paths that would still convert without the channel. It is still measuring
-    observed credit, not causation - and the tests below show exactly how far
-    that falls short.
+    observed credit, not causation - and tests/test_attribution.py shows exactly
+    how far that falls short.
     """
     base_matrix, base_states = _transition_matrix(journeys)
     base_probability = _conversion_probability(base_matrix, base_states)

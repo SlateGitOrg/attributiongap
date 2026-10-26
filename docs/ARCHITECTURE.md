@@ -30,7 +30,7 @@ Everything is plain Python with no external dependencies. The generator is the o
 
 - Zero incremental conversions makes the factor infinite; `corrected` returns 0 for such a channel and the ranking puts it first.
 - Stale evidence (confidence below 0.25) is flagged and shrunk rather than applied at full strength.
-- Small holdouts produce noisy factors; the demo's experiment-based figures vary between runs.
+- Small holdouts produce noisy factors; the demo is seeded and reproducible, but change the seed and the experiment-based factors move materially.
 
 ## Out of scope
 

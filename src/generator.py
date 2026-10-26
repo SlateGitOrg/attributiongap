@@ -14,6 +14,7 @@ than arguable.
 from __future__ import annotations
 
 import random
+import zlib
 from dataclasses import dataclass
 
 CHANNELS = (
@@ -160,7 +161,7 @@ def run_holdout(
     and slow, which is precisely why it is run rarely - and why the bias
     factors below exist to carry its findings into the daily numbers.
     """
-    rnd = random.Random(hash((channel, seed)) & 0xFFFFFFFF)
+    rnd = random.Random(zlib.crc32(channel.encode()) ^ seed)
     treated = simulate_journeys(users // 2, seed=rnd.randrange(1 << 30))
     holdout_source = simulate_journeys(users // 2, seed=rnd.randrange(1 << 30))
 
