@@ -1,6 +1,6 @@
 """Attribution models, and the bias factors that reconcile them with truth.
 
-THE DIFFERENTIATOR LIVES HERE.
+Why this module exists.
 
 The attribution tool says paid search drove 4,200 conversions. The holdout
 experiment says its incremental contribution was 1,100. Both numbers appear in

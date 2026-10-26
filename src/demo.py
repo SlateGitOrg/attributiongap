@@ -1,4 +1,4 @@
-"""The 60-second artefact: two numbers, and the factor that reconciles them.
+"""The demo: two numbers, and the factor that reconciles them.
 
 Run: python -m src.demo
 """
@@ -27,7 +27,7 @@ def main() -> None:
     even = linear(journeys)
     truth = {c: true_incremental_conversions(journeys, c) for c in CHANNELS}
 
-    print("\n  ATTRIBUTIONGAP - two numbers in the same deck")
+    print("\n  attributiongap: two numbers in the same deck")
     print("  " + "=" * 78)
     print(f"  {USERS:,} users, {conversions:,} conversions, of which "
           f"{organic:,} ({organic / conversions:.0%}) would have")
